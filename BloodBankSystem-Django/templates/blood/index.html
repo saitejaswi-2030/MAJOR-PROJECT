@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .xyz{
+          margin-bottom: 10px;
+          background-image: url('{% static "image/img.jpg" %}');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+        }
+
+        @-webkit-keyframes glow {
+      from {
+        text-shadow: 0 0 10px #eeeeee, 0 0 20px #000000, 0 0 30px #06e928, 0 0 40px #000000, 0 0 50px aquamarine, 0 0 60px blueviolet, 0 0 70px #9554b3;
+      }
+
+      to {
+        text-shadow: 0 0 20px yellow, 0 0 30px #d1fa2d, 0 0 40px black, 0 0 50px #06f116, 0 0 60px aqua, 0 0 70px #06f116, 0 0 80px greenyellow ;
+      }
+    }
+    .alert {
+      margin: 0px;
+    }
+
+
+
+    .glow {
+      font-size: 25px;
+      color: white;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+    
+      </style>
+      
+</head>
+
+
+<body>
+  {% include "blood/navbar.html" %}
+<br>
+<section id="section-jumbotron" style="margin-bottom: 0px;" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center xyz">
+    <div class="container text-center">
+      <br><br> <br>
+        <b><h1 class="display-3 glow" style="color: whitesmoke;">Welcome To Blood Bank Management System</h1></b>
+
+        <br><br><br><br><br><br><br><br><br><br><br>
+      
+      <br><br><br><br><br><br><br>
+      
+    </div>  
+  </section>
+
+
+  
+  {% include "blood/footer.html" %}
+
+
+</body>
+
+</html>
